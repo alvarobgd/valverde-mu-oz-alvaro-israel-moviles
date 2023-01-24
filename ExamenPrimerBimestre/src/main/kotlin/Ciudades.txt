@@ -1,0 +1,4 @@
+Cumbaya,12321322,1232.232,false,Fransico Yumda
+Machachi,123232,546.3,false,"Juan Guarderas"
+Latacunga,2321,54465.0,true,Cintia Viteri
+Quito,3545158,12545.56,true,Alvaro Valverde
