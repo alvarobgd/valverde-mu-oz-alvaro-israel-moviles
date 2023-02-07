@@ -1,2 +1,2 @@
-Cotopaxi,6546545.0,Costa,Juan Zaruma,Latacunga 
-Pichincha,465465.0,Costa,Jorge Yunda,Cumbaya Quito  
+Cotopaxi,781566.0,Costa,Paola Pavon,Salcedo 
+Pichincha,789156.0,Costa,Pablo Juan,Quito Cumbaya Sangolqui  

@@ -1,4 +1,5 @@
-Cumbaya,12321322,1232.232,false,Fransico Yumda
-Machachi,123232,546.3,false,"Juan Guarderas"
-Latacunga,2321,54465.0,true,Cintia Viteri
-Quito,3545158,12545.56,true,Alvaro Valverde
+Cumbaya,5485655,485455.551,false,Juan Guarderas
+Salcedo,4526523,4.8762552E7,true,Bad Bunny
+Latacunga,751525,751259.45,false,Juan Perez
+Quito,45785155,5478545.255,true,Jorge Yunda
+Sangolqui,44852,645455.155,false,Alvaro Sanchez
