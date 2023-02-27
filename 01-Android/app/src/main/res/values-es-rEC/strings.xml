@@ -1,6 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">MovCompALV</string>
     <string name="hola_mundo">Alv.  hola mundo . mov</string>
-    <color name="color_hola_mundo">#D1B8F4</color>
     <string name="hola_locale">Alv.  hola mundo .español</string>
 </resources>
