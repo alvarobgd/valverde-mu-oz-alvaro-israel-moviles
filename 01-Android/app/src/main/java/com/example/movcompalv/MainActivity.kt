@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.provider.ContactsContract
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.result.contract.ActivityResultContracts
 
 class MainActivity : AppCompatActivity() {
@@ -51,19 +52,18 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val botonCicloVida = findViewById<Button>(R.id.btn_ciclo_vida)
-        botonCicloVida.setOnClickListener{irActividad(ACicloVida::class.java)}
 
-        val botonListView = findViewById<Button>(R.id.btn_ir_ciclo_vida)
-        botonListView.setOnClickListener{
-            irActividad(BListView::class.java)
-        }
 
+        val botonRestaurante = findViewById<ImageButton>(R.id.id_boton_imagen_restaurante)
+        botonRestaurante.setOnClickListener{irActividad(Restaurante::class.java)}
+
+        val botonMercado = findViewById<ImageButton>(R.id.id_boton_imagen_mercado)
+        botonMercado.setOnClickListener { irActividad(Restaurante::class.java) }
 
     }
 
 
-    fun abrirActividadConParametros(clase: Class<*>)
+
     fun irActividad(clase:Class<*>){
         val intent =  Intent(this,clase)
         startActivity(intent)
