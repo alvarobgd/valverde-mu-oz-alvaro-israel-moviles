@@ -1,6 +1,7 @@
 package com.example.movcompalv
 
 import android.os.Bundle
+import android.os.PersistableBundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -77,5 +78,22 @@ class ACicloVida : AppCompatActivity() {
         textoGlobal,Snackbar.LENGTH_LONG)
             .setAction("Action",null).show()
 
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        outState.run {
+            putString("textoGuardado",textoGlobal)
+        }
+        super.onSaveInstanceState(outState)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+
+        val textoRecuperado:String? = savedInstanceState.getString("textoGuardado")
+        if(textoRecuperado != null){
+            mostrarSnackBar(textoRecuperado)
+            textoGlobal = textoRecuperado
+        }
     }
 }
