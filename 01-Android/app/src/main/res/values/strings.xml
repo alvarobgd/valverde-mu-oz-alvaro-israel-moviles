@@ -1,8 +1,14 @@
 <resources>
-    <string-array name="posibles_ubicaciones">
-        <item>Avenida Napo y Pedro Pinto</item>
-        <item>Avenia Mariscal y La Tola</item>
-        <item>Conjunto Las Penias, Conocoto</item>
+    <string-array name="regiones">
+        <item>Costa</item>
+        <item>Sierra</item>
+        <item>Oriente</item>
+        <item>Amazonia</item>
+    </string-array>
+
+    <string-array name="es_capital">
+        <item>Verdadero</item>
+        <item>Falso</item>
     </string-array>
 
     <string name="hola_mundo">Alv.  hola mundo . mov</string>
@@ -18,5 +24,5 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_cosa1">cosa1</string>
-    <string name="title_activity_restaurante">Restaurante</string>
+
 </resources>

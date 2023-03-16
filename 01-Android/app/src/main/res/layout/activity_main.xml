@@ -7,250 +7,53 @@
     android:background="#000000"
     tools:context=".MainActivity">
 
-
-    <Spinner
-        android:id="@+id/id_spinner_ubicacion"
-        android:layout_width="253dp"
-        android:layout_height="46dp"
-        android:background="@drawable/bordes"
-        android:entries="@array/posibles_ubicaciones"
-        android:foregroundTint="#FFFFFF"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.575"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.042" />
-
-    <ImageView
-        android:id="@+id/imagenUbi"
+    <Button
+        android:id="@+id/id_boton_crear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="Crear"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/id_spinner_ubicacion"
-        app:layout_constraintHorizontal_bias="0.627"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.039"
-        app:srcCompat="@drawable/icono_ubi" />
+        app:layout_constraintVertical_bias="0.157" />
 
-    <TextView
-        android:id="@+id/que_quieres_comer_hoy"
-        android:layout_width="241dp"
-        android:layout_height="34dp"
-
-        android:background="@drawable/bordes"
-        android:text="¿Qué quieres comer hoy?"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/id_spinner_ubicacion"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/id_spinner_ubicacion"
-        app:layout_constraintTop_toBottomOf="@+id/id_spinner_ubicacion"
-        app:layout_constraintVertical_bias="0.046" />
-
-    <ImageView
-        android:id="@+id/lupa"
+    <Button
+        android:id="@+id/id_boton_leer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@+id/que_quieres_comer_hoy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/que_quieres_comer_hoy"
-        app:layout_constraintTop_toTopOf="@+id/que_quieres_comer_hoy"
-        app:srcCompat="@android:drawable/ic_menu_search" />
-
-    <HorizontalScrollView
-        android:id="@+id/id_horinzontal_scroll_view"
-        android:layout_width="342dp"
-        android:layout_height="184dp"
+        android:text="Leer"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29">
+        app:layout_constraintVertical_bias="0.294" />
 
-        <LinearLayout
-            android:id="@+id/imagenes_lyaout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/propaganda1" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="#000000"
-                android:src="@drawable/propaganda2" />
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/propaganda3" />
-
-        </LinearLayout>
-
-
-    </HorizontalScrollView>
-
-    <HorizontalScrollView
-        android:id="@+id/id_scroll_menu"
-        android:layout_width="404dp"
-        android:layout_height="308dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.428"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.848">
-
-        <LinearLayout
-            android:id="@+id/id_layout_menu_horizontal"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-
-            <LinearLayout
-                android:id="@+id/id_layout_menu_vertical1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <!-- ImageButtons del primer piso -->
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_restaurante"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#040404"
-                    android:src="@drawable/restaurante" />
-
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_farmacia"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/farmacia" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/id_layout_menu_vertical2"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <!-- ImageButtons del primer piso -->
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_mercado"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/mercado" />
-
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_cesta"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/cesta" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/id_layout_menu_vertical3"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <!-- ImageButtons del primer piso -->
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_rappimall"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/rapimall" />
-
-                <ImageButton
-                    android:id="@+id/id_boton_licor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/licor" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/id_layout_menu_vertical4"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <!-- ImageButtons del primer piso -->
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_express"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/express" />
-
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_mascota"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/mascota" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/id_layout_menu_vertical5"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <!-- ImageButtons del primer piso -->
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_rappifavor"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/favor" />
-
-                <ImageButton
-                    android:id="@+id/id_boton_imagen_masservicios"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="#000000"
-                    android:src="@drawable/masservicios" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-    </HorizontalScrollView>
-
-    <ImageButton
-        android:id="@+id/descuento_boton"
+    <Button
+        android:id="@+id/id_boton_actualizar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="#000000"
+        android:text="Actualizar"
+        android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.992"
-        app:srcCompat="@drawable/descuento" />
+        app:layout_constraintVertical_bias="0.417" />
+
+    <Button
+        android:id="@+id/id_boton_eliminar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Eliminar"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.589" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
