@@ -14,51 +14,44 @@ import androidx.activity.result.contract.ActivityResultContracts
 class MainActivity : AppCompatActivity() {
 
 
-    val contenidoIntentExplicito =
-        registerForActivityResult(ActivityResultContracts.StartActivityForResult()){result ->
-            if (result.resultCode == Activity.RESULT_OK){
-                if(result.data!=null){
-                    val data = result.data
-                    Log.i("intent-epn","${data?.getStringExtra("nombreModificado")}")
-                }
-            }
-        }
 
-    val contenidoImplicito = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-        result ->
-        if(result.resultCode == RESULT_OK){
-            if(result.data!!.data != null){
-                val uri: Uri = result.data!!.data!!
-                val cursor = contentResolver.query(
-                    uri,
-                    null,
-                    null,
-                    null,
-                    null,
-                    null
-                )
-                cursor?.moveToFirst()
-                val indiceTelefono = cursor?.getColumnIndex(
-                    ContactsContract.CommonDataKinds.Phone.NUMBER
-                )
-                val telefono = cursor?.getString(
-                    indiceTelefono!!
-                )
-                cursor?.close()
-                Log.i("intent-epn","Telefono ${telefono}")
-            }
-        }
-    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
 
-        val botonRestaurante = findViewById<ImageButton>(R.id.id_boton_imagen_restaurante)
-        botonRestaurante.setOnClickListener{irActividad(Restaurante::class.java)}
 
-        val botonMercado = findViewById<ImageButton>(R.id.id_boton_imagen_mercado)
-        botonMercado.setOnClickListener { irActividad(Restaurante::class.java) }
+        val botonCrear = findViewById<Button>(R.id.id_boton_crear)
+        botonCrear.setOnClickListener {
+            val intent = Intent(this, FormCrear::class.java)
+            intent.putExtra("identificador","Crear")
+            startActivity(intent)
+            //irActividad(FormCrear::class.java)
+            }
+
+        val botonLeer = findViewById<Button>(R.id.id_boton_leer)
+        botonLeer.setOnClickListener {
+            val intent = Intent(this, FormCrear::class.java)
+            intent.putExtra("identificador","Leer")
+            startActivity(intent)
+            //irActividad(FormCrear::class.java)
+            }
+
+        val botonActualizar = findViewById<Button>(R.id.id_boton_actualizar)
+        botonActualizar.setOnClickListener {
+            val intent = Intent(this, FormCrear::class.java)
+            intent.putExtra("identificador","Actualizar")
+            startActivity(intent)
+            //irActividad(FormCrear::class.java)
+            }
+
+        val botonEliminar = findViewById<Button>(R.id.id_boton_eliminar)
+        botonEliminar.setOnClickListener {
+            val intent = Intent(this, FormCrear::class.java)
+            intent.putExtra("identificador","Eliminar")
+            startActivity(intent)
+            //irActividad(FormCrear::class.java)
+        }
 
     }
 

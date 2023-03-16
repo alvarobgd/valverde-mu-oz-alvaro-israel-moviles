@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <string-array name="posibles_ubicaciones">
-        <item>Avenida Napo y Pedro Pinto</item>
-        <item>Avenia Mariscal y La Tola</item>
-        <item>Conjunto Las Penias, Conocoto</item>
+    <string-array name="regiones">
+        <item>Costa</item>
+        <item>Sierra</item>
+        <item>Oriente</item>
+        <item>Amazonia</item>
+    </string-array>
+
+    <string-array name="es_capital">
+        <item>Verdadero</item>
+        <item>Falso</item>
     </string-array>
     <string name="hola_mundo">Alv.  Hola mundo</string>
     <color name="color_hola_mundo">#15C632</color>
